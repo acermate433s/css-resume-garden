@@ -49,6 +49,23 @@ main {
 
 #contact-info {
     margin-bottom: calc(var(--default-margin-bottom) * 2);
+/* 
+    #linkedin {
+        display: inline-flex;
+        align-items: center;
+    }
+ */
+    #linkedin::before {
+        background-image: url(https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        content: "";
+        width: 18px;
+        height: 18px;
+        vertical-align: top;
+        margin-right: 3px;
+    }
 
     h1 {
         font-size: 32pt;
