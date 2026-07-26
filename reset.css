@@ -1,6 +1,6 @@
 /* https://vale.rocks/posts/css-reset */
 
-@layer {
+@layer reset {
 	*,
 	*::before,
 	*::after {

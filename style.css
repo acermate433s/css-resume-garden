@@ -1,0 +1,124 @@
+@import url('reset.css');
+
+@layer reset, defaults;
+
+@layer defaults {
+    body {
+        font: 11pt Arial, Helvetica, sans-serif;
+        margin: 0 10% 0 10%;
+    }
+    ul {
+        padding: 0 0 0 40px;
+    }
+}
+
+:root {
+    --default-margin-bottom: 8pt;
+    --padding-after-section-header: 16pt;
+}
+
+@media print {
+    .job-entry,
+    .skills-category,
+    .education-entry {
+        break-inside: avoid;
+    }
+}
+
+body {
+    header {
+        padding-top: calc(var(--default-margin-bottom) * 2);
+    }
+}
+
+main { 
+    padding-bottom: calc(var(--default-margin-bottom) * 2);
+    
+    section {
+        margin-bottom: calc(var(--default-margin-bottom) * 2);
+
+        h2 {
+            margin-bottom: var(--default-margin-bottom);
+        }
+
+        div {
+            padding-left: var(--padding-after-section-header);
+        }
+    }
+}
+
+#contact-info {
+    margin-bottom: calc(var(--default-margin-bottom) * 2);
+
+    h1 {
+        font-size: 32pt;
+        margin-bottom: -16pt;
+    }
+    * {
+        text-align: center;
+    }
+
+    p, a::after {
+        white-space: pre-wrap;
+    }
+}
+
+#technical-skills {
+    h3 {
+        margin-bottom: var(--default-margin-bottom);
+    }
+    .skills-category {
+        margin-bottom: var(--default-margin-bottom);
+    }
+}
+
+#employment-history {
+    .job-entry {
+        padding-left: var(--padding-after-section-header);
+        margin-bottom: var(--default-margin-bottom);
+
+        header h3 em {
+            font-weight: normal;
+            font-style: italic;
+            font-size: smaller;
+        }
+    }
+    ul {
+        padding: 15px 0 0 15px;
+    }
+    p {
+        font-size: smaller;
+    }
+    .job-entry .job-details {
+        padding: var(--default-margin-bottom) 0 0 0;
+
+        ul {
+            padding-left: 30px;
+            padding-bottom: var(--default-margin-bottom);
+        }
+    }
+}
+
+#certifications-and-trainings {
+    li {
+        margin-bottom: var(--default-margin-bottom);
+    }
+    span {
+        display: block;
+    }
+    time {
+        font-style: italic;
+        font-size: smaller;
+    }
+}
+
+#education {
+    .education-entry {
+        margin-bottom: var(--default-margin-bottom);
+
+        p {
+            font-style: italic;
+            font-size: smaller;
+        }
+    }
+}
