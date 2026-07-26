@@ -75,13 +75,15 @@ main {
 #employment-history {
     .job-entry {
         padding-left: var(--padding-after-section-header);
-        margin-bottom: var(--default-margin-bottom);
 
         header h3 em {
             font-weight: normal;
             font-style: italic;
             font-size: smaller;
         }
+    }
+    h2 {
+        margin-bottom: auto;
     }
     ul {
         padding: 15px 0 0 15px;
