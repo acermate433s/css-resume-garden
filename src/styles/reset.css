@@ -40,7 +40,7 @@
 	}
 
 	svg:not([fill]) {
-		fill: currentColor;
+		fill: currentcolor;
 	}
 
 	input,
