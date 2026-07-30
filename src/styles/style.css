@@ -5,7 +5,7 @@
 @layer defaults {
     body {
         font: 11pt Arial, Helvetica, sans-serif;
-        margin: 0 10% 0 10%;
+        margin: 0 10%;
     }
 
     ul {
@@ -14,8 +14,9 @@
 }
 
 :root {
-    --default-margin-bottom: 8pt;
-    --padding-after-section-header: 16pt;
+    --spacing-sm: 8pt;
+    --spacing-lg: calc(var(--spacing-sm) * 2);
+    --section-indent: 16pt;
 }
 
 @media print {
@@ -28,28 +29,28 @@
 
 body {
     header {
-        padding-top: calc(var(--default-margin-bottom) * 2);
+        padding-top: var(--spacing-lg);
     }
 }
 
-main { 
-    padding-bottom: calc(var(--default-margin-bottom) * 2);
-    
+main {
+    padding-bottom: var(--spacing-lg);
+
     section {
-        margin-bottom: calc(var(--default-margin-bottom) * 2);
+        margin-bottom: var(--spacing-lg);
 
         h2 {
-            margin-bottom: var(--default-margin-bottom);
+            margin-bottom: var(--spacing-sm);
         }
 
-        div {
-            padding-left: var(--padding-after-section-header);
+        > div {
+            padding-left: var(--section-indent);
         }
     }
 }
 
 #contact-info {
-    margin-bottom: calc(var(--default-margin-bottom) * 2);
+    margin-bottom: var(--spacing-lg);
 
     #linkedin::before {
         background-image: url('../images/linkedin.png');
@@ -71,12 +72,14 @@ main {
         text-align: center;
     }
 
-    span::after {
+    span::after,
+    a:nth-child(2)::after,
+    a:nth-child(3)::after {
         content: " | ";
     }
 
-    a:nth-child(2)::after, a:nth-child(3)::after {
-        content: " | ";
+    a:nth-child(2)::after,
+    a:nth-child(3)::after {
         color: inherit;
         text-decoration: none;
         cursor: text;
@@ -84,12 +87,9 @@ main {
 }
 
 #technical-skills {
-    h3 {
-        margin-bottom: var(--default-margin-bottom);
-    }
-
+    h3,
     .skills-category {
-        margin-bottom: var(--default-margin-bottom);
+        margin-bottom: var(--spacing-sm);
     }
 }
 
@@ -107,7 +107,7 @@ main {
     }
 
     .job-entry {
-        padding-left: var(--padding-after-section-header);
+        padding-left: var(--section-indent);
 
         header h3 em {
             font-weight: normal;
@@ -116,16 +116,15 @@ main {
         }
 
         .job-details {
-            padding: var(--default-margin-bottom) 0 0 0;
+            padding-top: var(--spacing-sm);
 
             ul {
-                padding-left: 30px;
-                padding-bottom: var(--default-margin-bottom);
+                padding: 0 0 var(--spacing-sm) 30px;
             }
         }
 
         .job-meta {
-            margin-bottom: var(--default-margin-bottom);
+            margin-bottom: var(--spacing-sm);
 
             span::after {
                 content: " | ";
@@ -136,13 +135,13 @@ main {
 
 #certifications-and-trainings {
     li {
-        margin-bottom: var(--default-margin-bottom);
+        margin-bottom: var(--spacing-sm);
     }
 
     span {
         display: block;
     }
-    
+
     time {
         font-style: italic;
         font-size: smaller;
@@ -151,7 +150,7 @@ main {
 
 #education {
     .education-entry {
-        margin-bottom: var(--default-margin-bottom);
+        margin-bottom: var(--spacing-sm);
 
         p {
             font-style: italic;
