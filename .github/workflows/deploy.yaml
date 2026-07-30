@@ -19,9 +19,16 @@ jobs:
       with:
         node-version: 22.x
 
-    - name: Build with Webpack
+    - name: Install NPM dependencies
       run: |
         npm ci
+
+    - name: Lint with ESLint
+      run: |
+        npm run lint
+
+    - name: Build with Webpack
+      run: |
         npm run build
 
     - name: Upload generated files as artifact
