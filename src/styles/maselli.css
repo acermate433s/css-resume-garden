@@ -53,6 +53,10 @@ main {
             padding-left: var(--padding-after-section-header);
         }
     }
+
+    strong {
+        color: #eeeeee;
+    }
 }
 
 #contact-info {
