@@ -76,6 +76,11 @@ main {
     a:nth-child(2)::after,
     a:nth-child(3)::after {
         content: " | ";
+
+        @media screen and (max-width: 984px) {
+            display: block;
+            content: none;
+        }
     }
 
     a:nth-child(2)::after,
