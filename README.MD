@@ -14,6 +14,7 @@ Available styles
 
 - Default style: https://acermate433s.github.io/css-resume-garden
 - Maselli theme: https://acermate433s.github.io/css-resume-garden?style=maselli
+- Shortened theme: https://acermate433s.github.io/css-resume-garden?style=shortened
 
 Source
 

@@ -1,0 +1,174 @@
+@import url('./reset.css');
+
+@layer reset, defaults;
+
+@layer defaults {
+    body {
+        font: 11pt Arial, Helvetica, sans-serif;
+        margin: 0 10%;
+    }
+
+    ul {
+        padding: 0 0 0 40px;
+    }
+}
+
+:root {
+    --spacing-sm: 8pt;
+    --spacing-lg: calc(var(--spacing-sm) * 2);
+    --section-indent: 16pt;
+}
+
+@media print {
+    .job-entry,
+    .skills-category,
+    .education-entry {
+        break-inside: avoid;
+    }
+}
+
+body {
+    header {
+        padding-top: var(--spacing-lg);
+    }
+}
+
+main {
+    padding-bottom: var(--spacing-lg);
+
+    section {
+        margin-bottom: var(--spacing-lg);
+
+        h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        > div {
+            padding-left: var(--section-indent);
+        }
+    }
+}
+
+#contact-info {
+    margin-bottom: var(--spacing-lg);
+
+    #linkedin::before {
+        background-image: url('../images/linkedin.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        content: "";
+        width: 18px;
+        height: 18px;
+        vertical-align: top;
+        margin-right: 3px;
+    }
+
+    h1 {
+        font-size: 32pt;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    span::after,
+    a:nth-child(2)::after,
+    a:nth-child(3)::after {
+        content: " | ";
+
+        @media screen and (width <= 984px) {
+            content: "\A";
+            white-space: pre;
+        }
+    }
+
+    a:nth-child(2)::after,
+    a:nth-child(3)::after {
+        color: inherit;
+        text-decoration: none;
+        cursor: text;
+    }
+}
+
+#technical-skills {
+    h3,
+    .skills-category {
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+#employment-history {
+    h2 {
+        margin-bottom: auto;
+    }
+
+    ul {
+        padding: 15px 0 0 15px;
+    }
+
+    p {
+        font-size: smaller;
+    }
+
+    .job-entry {
+        padding-left: var(--section-indent);
+
+        header h3 em {
+            font-weight: normal;
+            font-style: italic;
+            font-size: smaller;
+        }
+
+        .job-details {
+            padding-top: var(--spacing-sm);
+
+            ul {
+                padding: 0 0 var(--spacing-sm) 30px;
+            }
+        }
+
+        .job-meta {
+            margin-bottom: var(--spacing-sm);
+
+            span::after {
+                content: " | ";
+            }
+        }
+    }
+
+    .job-entry:nth-child(6),
+    .job-entry:nth-child(7) {
+        display: none;
+    }
+}
+
+#certifications-and-trainings {
+    display: none;
+
+    li {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    span {
+        display: block;
+    }
+
+    time {
+        font-style: italic;
+        font-size: smaller;
+    }
+}
+
+#education {
+    display: none;
+
+    .education-entry {
+        margin-bottom: var(--spacing-sm);
+
+        p {
+            font-style: italic;
+            font-size: smaller;
+        }
+    }
+}
