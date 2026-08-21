@@ -147,8 +147,7 @@ main {
 
         header h3,
         .job-title,
-        .job-meta,
-        .job-details h4 {
+        .job-meta {
             color: var(--accent-color);
         }
 
@@ -156,14 +155,6 @@ main {
             font-weight: normal;
             font-style: italic;
             font-size: smaller;
-        }
-
-        .job-details {
-            padding-top: var(--spacing-sm);
-
-            ul {
-                padding: 0 0 var(--spacing-sm) 30px;
-            }
         }
 
         .job-meta {

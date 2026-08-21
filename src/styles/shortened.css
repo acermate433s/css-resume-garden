@@ -120,14 +120,6 @@ main {
             font-size: smaller;
         }
 
-        .job-details {
-            padding-top: var(--spacing-sm);
-
-            ul {
-                padding: 0 0 var(--spacing-sm) 30px;
-            }
-        }
-
         .job-meta {
             margin-bottom: var(--spacing-sm);
 
