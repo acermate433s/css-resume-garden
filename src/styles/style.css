@@ -28,6 +28,15 @@
 }
 
 body {
+    strong {
+        font-weight: 900;
+    }
+
+    em {
+        font-weight: 600;
+        font-style: normal;
+    }
+    
     header {
         padding-top: var(--spacing-lg);
     }
@@ -77,7 +86,7 @@ main {
     a:nth-child(3)::after {
         content: " | ";
 
-        @media screen and (width <= 984px) {
+        @media screen and (width <= 984px), print {
             content: "\A";
             white-space: pre;
         }
