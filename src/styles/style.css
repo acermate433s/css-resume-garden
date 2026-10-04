@@ -107,7 +107,8 @@ main {
     }
 }
 
-#employment-history {
+#employment-history,
+#contractual-work {
     h2 {
         margin-bottom: auto;
     }
